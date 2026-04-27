@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+firebase-admin
+google-generativeai
+python-dateutil
+slowapi
+python-multipart
+pydantic-settings
+python-dotenv
+motor
+pymongo
+passlib[bcrypt]
+python-jose[cryptography]
+twilio
+mangum
