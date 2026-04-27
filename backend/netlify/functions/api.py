@@ -1,9 +1,10 @@
 import sys
 import os
 
-# Add the parent directory to sys.path so we can import the 'app' module
-# This is necessary for Netlify Functions to find your FastAPI code
-sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+# Add the current directory to sys.path
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+# Add the parent directory (backend/) to sys.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
 
 from main import app
 from mangum import Mangum
