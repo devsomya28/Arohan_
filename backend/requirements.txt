@@ -16,3 +16,4 @@ python-jose[cryptography]
 twilio
 mangum
 Pillow
+google-cloud-speech
