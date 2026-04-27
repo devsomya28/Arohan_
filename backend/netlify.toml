@@ -1,0 +1,13 @@
+[build]
+  command = "pip install -r requirements.txt"
+  functions = "netlify/functions"
+  publish = "."
+
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = ["mangum"]
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/api"
+  status = 200

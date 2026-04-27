@@ -12,3 +12,4 @@ pymongo
 passlib[bcrypt]
 python-jose[cryptography]
 twilio
+mangum
