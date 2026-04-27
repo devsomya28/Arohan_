@@ -59,6 +59,13 @@ app.include_router(dashboard.router)
 app.include_router(report.router)
 app.include_router(websockets.router, tags=["WebSockets"])
 
+# Serve Flutter Web Frontend
+from fastapi.staticfiles import StaticFiles
+import os
+public_path = os.path.join(os.path.dirname(__file__), "public")
+if os.path.exists(public_path):
+    app.mount("/", StaticFiles(directory=public_path, html=True), name="public")
+
 @app.on_event("startup")
 async def startup_event():
     # Connect to MongoDB
