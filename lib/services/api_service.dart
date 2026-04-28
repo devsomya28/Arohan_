@@ -8,7 +8,7 @@ import '../models/incident.dart';
 
 class ApiService {
   // Base URL — change to your actual server IP when deployed
-  final String baseUrl = kIsWeb ? 'http://localhost:8000' : 'http://10.0.2.2:8000';
+  final String baseUrl = 'https://arohan-6.onrender.com';
 
   static const String _tokenKey = 'auth_token';
   static const String _roleKey = 'auth_role';
